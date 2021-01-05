@@ -1,0 +1,54 @@
+---
+- title: campo nome vazio
+  payload:
+    name: ''
+    email: gustavo.carranca@hotmail.com
+    password: '12345'
+  code: 412
+  error: required name
+- title: sem o campo nome
+  payload:
+    email: gustavo.carranca@hotmail.com
+    password: '12345'
+  code: 412
+  error: required name
+- title: campo email vazio
+  payload:
+    name: Gustavo da Silva
+    email: ''
+    password: '12345'
+  code: 412
+  error: required email
+- title: sem o campo email
+  payload:
+    name: Gustavo da Silva
+    password: '12345'
+  code: 412
+  error: required email
+- title: email invalido
+  payload:
+    name: Gustavo da Silva
+    email: gustavo.carranca#hotmail.com
+    password: '12345'
+  code: 412
+  error: wrong email
+- title: campo senha vazio
+  payload:
+    name: Gustavo da Silva
+    email: gustavo.carranca@hotmail.com
+    password: ''
+  code: 412
+  error: required password
+- title: sem o campo senha
+  payload:
+    name: Gustavo da Silva
+    email: gustavo.carranca@hotmail.com
+  code: 412
+  error: required password
+- title: todos os campos vazios
+  payload:
+    name: ''
+    email: ''
+    password: ''
+  code: 412
+  error: required name
